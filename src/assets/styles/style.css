@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('../fonts/WEB/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+    url('../fonts/WEB/fonts/ClashDisplay-Semibold.woff') format('woff');
+    
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: Times;
+} */
+
+/* @font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay-Bold.woff2") format("woff2"),
+       url("/fonts/ClashDisplay-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+} */
+
+
+.about-section {
+  background-image: url('../img/image.png');
+  background-size: auto;
+  /* Keeps the image's actual size */
+  background-position: right bottom;
+  /* Positions the image at the bottom right */
+  background-repeat: no-repeat;
+  /* Prevents repeating the image */
+}
+
+p {
+  font-family: "Raleway";
+  font-optical-sizing: auto;
+}
+
+.scoial-link .scoial-link>div>a {
+  font-family: "Raleway";
+  font-optical-sizing: auto;
+}
+
+.hero-section {
+  background-image: url('../img/Bg.svg');
+  background-size: cover;
+}
+
+h1 {
+  font-family: "Clash Display";
+  font-weight: 600 !important;
+  text-decoration-skip-ink: none;
+}
+
+.faq-font {
+  font-family: "Clash Display";
+
+  text-decoration-skip-ink: none;
+}
+
+.logo {
+  font-family: Times;
+}
