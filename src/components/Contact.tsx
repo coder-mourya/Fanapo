@@ -16,7 +16,7 @@ const Contact = () => {
         <title>Contact Us - Fanapo</title>
         <meta name="description" content="Get in touch with us for any queries or support" />
       </Helmet>
-      <section className="py-16 bg-[#EAB5C2] relative">
+      <section className="py-16 bg-[#EAB5C2] relative" id='contact'>
         <img
           src={menses}
           alt="Decorative"
@@ -26,9 +26,11 @@ const Contact = () => {
         <div className=" max-w-7xl px-4 mx-auto ">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className='text-center md:text-start'>
-              <h1 className="text-3xl md:text-5xl font-semibold mb-6">Please fill the form<br />for purchasing.</h1>
-              <p className="text-lg md:text-3xl font-normal mb-8">
-                We will delivered the product<br />in Chandigarh, himachal and<br />Haryana.
+              <h1 className="text-3xl md:text-4xl font-medium mb-6">
+                We will deliver the product without additional delivery charges in <span className='text-[#D70283]'>Chandigarh, <br />Himachal Pradesh, <br /> Haryana and Delhi NCR.</span>
+              </h1>
+              <p className="text-lg md:text-2xl font-medium mb-8 text-[#1F161A]">
+                Actual freight to pay in other states in India.
               </p>
 
             </div>
@@ -60,15 +62,12 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <select
+                <input
+                    type="tel"
+                    placeholder="Quantity"
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#E91E63] focus:border-transparent"
                     required
-                  >
-                    <option value="">Select Quantity</option>
-                    <option value="1">1 Pack</option>
-                    <option value="2">2 Packs</option>
-                    <option value="3">3 Packs</option>
-                  </select>
+                  />
                 </div>
                 <div>
                   <textarea

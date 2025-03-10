@@ -22,22 +22,19 @@ const features = [
 const Features = () => {
   return (
     <section className="py-16 bg-[#F2EFF5]">
-      <div className=" mx-auto max-w-7xl px-4 flex flex-col md:flex-row items-center">
-        <div className='md:w-1/2'>
+      <div className=" mx-auto max-w-7xl px-4  md:flex-row items-center">
+        <div className='text-center'>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-semibold mb-12"
           >
-            Every pad is  <br />
-            produced according <br />
-            to the standard of <br />
-            medicine
+            Keeps harmful bacteria away
           </motion.h1>
         </div>
 
-        <div className=" md:w-1/2 grid grid-cols-3  gap-8">
+        <div className=" grid grid-cols-3 gap-6 md:flex md:justify-around  ">
           {features.map((Feature, index) => (
             <motion.div
               key={index}

@@ -36,7 +36,7 @@ const Testimonials = () => {
   const slider = React.useRef<Slider | null>(null);
   const [isPaused, setIsPaused] = React.useState(false);
 
-  
+
 
 
   const settings = {
@@ -46,7 +46,7 @@ const Testimonials = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
     arrows: false,
     responsive: [
@@ -87,8 +87,8 @@ const Testimonials = () => {
       }
     }
   }, [isPaused]);
-  
-  
+
+
 
   return (
     <>
@@ -99,10 +99,13 @@ const Testimonials = () => {
       <section className="py-16 bg-[#FFFFFF]">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-12 max-w-7xl mx-auto ">
-            <h1 className=" text-2xl md:text-5xl font-bold">
-              1k+ <span className="text-[#E91E63]">Customers Love</span>
-            </h1>
-            <div className="flex gap-4">
+            <div>
+              <h1 className=" text-3xl md:text-5xl font-bold text-center md:text-left ">
+                1k+ <span className="text-[#E91E63]">Customers Love</span>
+              </h1>
+              <p className='text-[#1F161A] font-normal text-[14px] md:text-xl mt-4 text-center md:text-left'>Join over 1,000 happy customers who trust and love our products! With top-notch quality, excellent service, <br /> and a commitment to customer satisfaction, we take pride in delivering the best experience</p>
+            </div>
+            <div className="hidden md:flex md:gap-4  ">
               <button
                 onClick={handlePrev}
                 className="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50"

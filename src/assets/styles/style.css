@@ -4,7 +4,7 @@
   font-family: 'Clash Display';
   src: url('../fonts/WEB/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
     url('../fonts/WEB/fonts/ClashDisplay-Semibold.woff') format('woff');
-    
+
   font-style: normal;
 }
 
@@ -44,7 +44,34 @@ p {
 .hero-section {
   background-image: url('../img/Bg.svg');
   background-size: cover;
+
 }
+
+.backound-pink {
+  background-image: none;
+  background-color: #ECC3C9;
+
+}
+
+.second-image img{
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 4px, rgba(0, 0, 0, 1) 10px);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 4px, rgba(0, 0, 0, 1) 10px);
+}
+
+/* .second-image {
+  position: relative;
+}
+
+.second-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px; 
+  background: linear-gradient(to bottom, #ECC3C9 20%, rgba(236, 195, 201, 0) 100%);
+} */
+
 
 h1 {
   font-family: "Clash Display";

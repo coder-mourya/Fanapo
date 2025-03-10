@@ -8,7 +8,7 @@ const faqs = [
   {
     id: 1,
     question: "What are the ingredients in Fanapo pads?",
-    answer: "Fanapo pads are made with GOTS organic cotton top sheet, ensuring they are free from harmful chemicals."
+    answer: "Fanapo Sanitary Napkins are made with organic cotton top sheet, and are ETO sterilized ensuring they are free from harmful chemicals."
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const faqs = [
   {
     id: 3,
     question: "What size are Fanapo pads?",
-    answer: "Fanapo pads come in various sizes to suit different needs: Regular (240mm), Heavy Flow (280mm), and Overnight (320mm)."
+    answer: "Fanapo Sanitary Napkin comes in one size currently i.e. 280mm"
   },
   {
     id: 4,
@@ -28,7 +28,7 @@ const faqs = [
   {
     id: 5,
     question: "What is Fanapo's shipping policy?",
-    answer: "We offer free shipping on all orders above ₹499. Orders are delivered within 3-5 business days across India."
+    answer: "We offer free shipping on all orders above ₹99 in Chandigarh, Himachal Pradesh, Haryana and Delhi-NCR. While in other states it would be freight to pay. Orders are delivered within 3-5 business days across India."
   }
 ];
 
@@ -41,7 +41,7 @@ const FAQ = () => {
         <title>FAQ - Fanapo</title>
         <meta name="description" content="Frequently asked questions about Fanapo products" />
       </Helmet>
-      <section className="py-16 bg-[#F4EFF6]">
+      <section className="py-20 bg-[#F4EFF6]">
         <div className="container max-w-7xl mx-auto ">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

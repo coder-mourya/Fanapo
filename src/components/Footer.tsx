@@ -18,18 +18,19 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <Home className="w-6 h-6 mt-1 flex-shrink-0" />
-                <p className="text-lg">11-03 PLQ 1, Paya Lebar Quarter U.P, 201301</p>
+                <p className="text-lg">Dhussara, Main Bazaar, Tehsil Amb,
+                  District Una, (H.P.) – 174302</p>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-6 h-6 flex-shrink-0" />
-                <a href="mailto:info@fanapo.com" className="text-lg hover:text-[#E91E63] transition-colors">
-                  info@fanapo.com
+                <a href="mailto:chetakenterprises2018@gmail.com" className="text-lg hover:text-[#E91E63] transition-colors">
+                  chetakenterprises2018@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-6 h-6 flex-shrink-0" />
                 <a href="tel:+919898989839" className="text-lg hover:text-[#E91E63] transition-colors">
-                  +91 9898989839
+                +91 7807100126
                 </a>
               </div>
             </div>
