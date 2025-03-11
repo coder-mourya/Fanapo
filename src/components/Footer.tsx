@@ -1,8 +1,26 @@
 // import React from 'react';
 import { Home, Mail, Phone, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { message } from "antd"
 import { motion } from 'framer-motion';
+import { useForm, ValidationError } from '@formspree/react';
+import 'antd/dist/reset.css';
+
+
 
 const Footer = () => {
+  const [state, handleSubmit] = useForm("mjkyvrlo");
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    await handleSubmit(e);
+
+    if (state.succeeded) {
+      message.success("Your message has been sent successfully!");
+      (e.target as HTMLFormElement).reset();  // Clears non-controlled inputs
+
+    }
+  };
+
   return (
     <footer className="py-16 bg-white">
       <div className="container max-w-7xl px-4  mx-auto">
@@ -30,7 +48,7 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Phone className="w-6 h-6 flex-shrink-0" />
                 <a href="tel:+919898989839" className="text-lg hover:text-[#E91E63] transition-colors">
-                +91 7807100126
+                  +91 7807100126
                 </a>
               </div>
             </div>
@@ -76,17 +94,29 @@ const Footer = () => {
 
             {/* Updated Input Field with Button Inside */}
             <div className="relative w-full">
-              <input
-                type="email"
-                placeholder="Enter your email id"
-                className="w-full px-4 py-3 pr-24 rounded-lg bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#E91E63]"
-              />
-              <button
-                type="submit"
-                className="absolute top-1/2 right-2 transform -translate-y-1/2 px-6 py-2 bg-[#E91E63] text-white rounded-lg hover:bg-[#D81B60] transition-colors font-medium"
+              <form
+                onSubmit={handleFormSubmit}
+                key={state.succeeded ? 'reset' : 'active'}
               >
-                Subscribe
-              </button>
+
+                <input
+                  type="email"
+                  id='email'
+                  name="email"
+                  required
+                  placeholder="Enter your email id"
+                  className="w-full px-4 py-3 pr-24 rounded-lg bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#E91E63]"
+                />
+                <ValidationError field="email" prefix="Email" errors={state.errors} />
+                <button
+                  type="submit"
+                  className="absolute top-1/2 right-2 transform -translate-y-1/2 px-6 py-2 bg-[#E91E63] text-white rounded-lg hover:bg-[#D81B60] transition-colors font-medium"
+                  disabled={state.submitting}
+                >
+                  Subscribe
+                </button>
+              </form>
+
             </div>
           </motion.div>
         </div>

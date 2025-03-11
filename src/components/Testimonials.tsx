@@ -11,24 +11,27 @@ import '../assets/styles/style.css';
 const testimonials = [
   {
     id: 1,
-    name: 'Rashmi Cadambi',
-    platform: 'Facebook',
-    text: "I've tried numerous brands, but none compare to this one! From its exceptional absorbency to its comfortable fit, I finally feel confident during that time of the month. thank you for creating such an amazing product!",
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80'
+    name: 'Rashmi Cadambi,',
+    age: '25yrs',
+    designation: 'ICICI employee',
+    text: "The best part of Fanapo is that it is ETO sterilized which was the main reason for me to buy this product; Nice individual packing of each pad"
+    
   },
   {
     id: 2,
-    name: 'Gourav Theja',
-    platform: 'Facebook',
-    text: "I've tried numerous brands, but none compare to this one! From its exceptional absorbency to its comfortable fit, I finally feel confident during that time of the month. thank you for creating such an amazing product!",
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80'
+    name: 'Vidhi gupta,',
+    age: '30yrs',
+    designation: 'B.sc student',
+    text: "It was so easy and handy to carry a single pad in my purse without any worry of it being exposed to any germs because each pad is packed in an envelope type of packing.",
+   
   },
   {
     id: 3,
-    name: 'Rashmi sha',
-    platform: 'Facebook',
-    text: "I've tried numerous brands, but none compare to this one! From its exceptional absorbency to its comfortable fit, I finally feel confident during that time of the month. thank you for creating such an amazing product!",
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80'
+    name: 'Sonia kapoor,',
+    age: '35yrs',
+    designation: 'House wife',
+    text: "Fanapo pads are extremely soft and comfortable. They leave no irritation even during heavy flow days",
+    
   }
 ];
 
@@ -125,17 +128,13 @@ const Testimonials = () => {
             <Slider ref={slider} {...settings}>
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="px-4">
-                  <div className="bg-[#FFF7F2] p-6 rounded-xl shadow-md">
+                  <div className="bg-[#FFF7F2] p-6 rounded-xl shadow-md h-56">
                     <div className="flex justify-between items-center gap-4 mb-4">
                       <div className='flex items-center gap-4'>
-                        <img
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          className="w-12 h-12 rounded-full object-cover"
-                        />
+                        
                         <div>
-                          <h3 className="font-semibold">{testimonial.name}</h3>
-                          <p className="text-gray-500 text-sm">{testimonial.platform}</p>
+                          <h3 className="font-semibold text-lg">{testimonial.name} <span className='text-[16px] font-normal text-[#4F5163]'>{testimonial.age}</span> </h3>
+                          <p className="text-gray-500 text-sm">{testimonial.designation}</p>
                         </div>
                       </div>
                       <div>
