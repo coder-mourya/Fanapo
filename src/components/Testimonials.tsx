@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+// import { Helmet } from 'react-helmet-async';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -32,6 +32,20 @@ const testimonials = [
     designation: 'House wife',
     text: "Fanapo pads are extremely soft and comfortable. They leave no irritation even during heavy flow days",
     
+  },
+  {
+    id: 4,
+    name: 'Anu sethi, ',
+    age: '40yrs',
+    designation: 'Business women',
+    text: "Pads have a pleasant smell, having no odour problem; Pads stick well, which makes me carefree while working for long hours."
+  }, 
+  {
+    id: 5,
+    name: 'Pooja bhist, ',
+    age: '22yrs',
+    designation: 'Student',
+    text: "Bought Fanapo sanitary napkin and I feel they are good quality and well-priced. I feel the product is softer than other brands and prevents me from rashes."
   }
 ];
 
@@ -95,18 +109,18 @@ const Testimonials = () => {
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Customer Testimonials - Fanapo</title>
         <meta name="description" content="See what our customers are saying about Fanapo products" />
-      </Helmet>
+      </Helmet> */}
       <section className="py-16 bg-[#FFFFFF]">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-12 max-w-7xl mx-auto ">
             <div>
               <h1 className=" text-3xl md:text-5xl font-bold text-center md:text-left ">
-                1k+ <span className="text-[#E91E63]">Customers Love</span>
+                1k+ <span className="text-[#E91E63]">Customers Reviews</span>
               </h1>
-              <p className='text-[#1F161A] font-normal text-[14px] md:text-xl mt-4 text-center md:text-left'>Join over 1,000 happy customers who trust and love our products! With top-notch quality, excellent service, <br /> and a commitment to customer satisfaction, we take pride in delivering the best experience</p>
+              <p className='text-[#1F161A] font-normal text-[14px] md:text-xl mt-4 text-center md:text-left'>Join over 1,000 happy customers who trust and love our product!</p>
             </div>
             <div className="hidden md:flex md:gap-4  ">
               <button

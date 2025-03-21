@@ -1,9 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 import { Carousel } from 'antd';
 import '../assets/styles/style.css';
-import img1 from "../assets/img/Default.jpg";
-import img2 from "../assets/img/Variant2.jpg";
-import img3 from '../assets/img/Variant3.jpg';
+import img1 from "../assets/img/1.jpg";
+import img2 from "../assets/img/3.jpg"
+import img3 from "../assets/img/2.jpg";
+
 import { useState } from 'react';
 
 
@@ -11,15 +12,14 @@ const Hero = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-
-
   return (
     <>
       <Helmet>
-        <title>Fanapo - Premium Feminine Hygiene Products</title>
+        <title>Fanapo </title>
         <meta name="description" content="Embrace each cycle with our pads that offer unmatched confidence and comfort" />
       </Helmet>
-      <section className={`relative hero-section md:min-h-screen flex flex-col ${currentSlide === 1 ? 'backound-pink' : ''}`}>
+      <section className={`relative md:min-h-screen flex flex-col ${currentSlide === 1 ? 'background-gray' : currentSlide === 2 ? 'backound-pink' : 'hero-section'}`}>
+
         <div className="w-full ">
           <div className="max-w-7xl mx-auto px-4 md:px-0 ">
             <header className="flex items-center justify-between md:px-4 pb-4 pt-8">
@@ -38,7 +38,7 @@ const Hero = () => {
             <div className="w-full  mx-auto">
               <Carousel
                 autoplay
-                beforeChange={( to) => setCurrentSlide(to)}
+                beforeChange={(current, next) => setCurrentSlide(next)} 
                 className="w-full">
                 <div className="md:h-screen flex justify-center">
                   <img src={img1} alt="Variant 1" className="w-full  md:h-full object-cover" />

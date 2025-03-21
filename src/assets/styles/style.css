@@ -49,8 +49,11 @@ p {
 
 .backound-pink {
   background-image: none;
-  background-color: #ECC3C9;
-
+  background-color: #ECC3C9 !important;
+}
+.background-gray{
+  background-image: none;
+  background-color: #FFBE99 !important;
 }
 
 .second-image img{

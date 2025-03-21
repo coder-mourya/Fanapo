@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+// import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import '../assets/styles/style.css'
@@ -8,7 +8,7 @@ const faqs = [
   {
     id: 1,
     question: "What are the ingredients in Fanapo pads?",
-    answer: "Fanapo Sanitary Napkins are made with organic cotton top sheet, and are ETO sterilized ensuring they are free from harmful chemicals."
+    answer: "Fanapo Sanitary Napkin is made with organic cotton top sheet and are ETO sterilized ensuring they are free from harmful chemicals"
   },
   {
     id: 2,
@@ -17,12 +17,12 @@ const faqs = [
   },
   {
     id: 3,
-    question: "What size are Fanapo pads?",
+    question: "What size is Fanapo pads?",
     answer: "Fanapo Sanitary Napkin comes in one size currently i.e. 280mm"
   },
   {
     id: 4,
-    question: "How often do I change a Fanapo pads?",
+    question: "How often do I change a Fanapo Sanitary Napkin?",
     answer: "For optimal hygiene, we recommend changing your pad every 4-6 hours, or more frequently during heavy flow days."
   },
   {
@@ -37,10 +37,10 @@ const FAQ = () => {
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>FAQ - Fanapo</title>
         <meta name="description" content="Frequently asked questions about Fanapo products" />
-      </Helmet>
+      </Helmet> */}
       <section className="py-20 bg-[#F4EFF6]">
         <div className="container max-w-7xl mx-auto ">
           <motion.h1

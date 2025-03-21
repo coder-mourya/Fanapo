@@ -1,19 +1,23 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+// import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import menses from "../assets/img/menses.png";
 import { useForm, ValidationError } from '@formspree/react';
 
-
-
 const Contact = () => {
   const [quantity, setQuantity] = useState("");
   const [state, handleSubmit] = useForm("xoveqqbk");
+  const [error, setError] = useState<string | null>("");
 
   const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = parseInt(e.target.value, 10);
     if (isNaN(value) || value < 0) value = 0;
-    if (value > 1000) value = 1000;
+    if (value > 1000) {
+      setError("Enter less than or equal to 1000");
+      value = 1000; 
+    } else {
+      setError(""); 
+    }
     setQuantity(value.toString());
   };
 
@@ -22,18 +26,18 @@ const Contact = () => {
     await handleSubmit(e);
 
     if (state.succeeded) {
-        (e.target as HTMLFormElement).reset(); // Type assertion here
-        setQuantity("");  // Clear quantity state as well
+      (e.target as HTMLFormElement).reset(); // Type assertion here
+      setQuantity("");  // Clear quantity state as well
     }
-};
+  };
 
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Contact Us - Fanapo</title>
         <meta name="description" content="Get in touch with us for any queries or support" />
-      </Helmet>
+      </Helmet> */}
 
 
       <section className="py-16 bg-[#EAB5C2] relative" id='contact'>
@@ -49,8 +53,12 @@ const Contact = () => {
               <h1 className="text-3xl md:text-4xl font-medium mb-6">
                 We will deliver the product without additional delivery charges in <span className='text-[#D70283]'>Chandigarh, <br />Himachal Pradesh, <br /> Haryana and Delhi NCR.</span>
               </h1>
+              <p className="text-lg md:text-2xl font-medium mb-4 text-[#1F161A]">
+              Actual freight to pay in other states in India. 
+              </p>
+
               <p className="text-lg md:text-2xl font-medium mb-8 text-[#1F161A]">
-                Actual freight to pay in other states in India.
+              Free pan India shipping on 50+ order quantity
               </p>
 
             </div>
@@ -99,6 +107,7 @@ const Contact = () => {
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#E91E63] focus:border-transparent"
                     required
                   />
+                   {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
                 </div>
                 <div>
                   <textarea

@@ -1,5 +1,5 @@
 // import React from 'react';
-import { Helmet } from 'react-helmet-async';
+// import { Helmet } from 'react-helmet-async';
 import aboutPic from "../assets/img/about.jpg"
 import "../assets/styles/style.css"
 
@@ -7,10 +7,10 @@ import "../assets/styles/style.css"
 const About = () => {
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>About Fanapo - Our Story and Mission</title>
         <meta name="description" content="Learn about Fanapo's mission to transform feminine hygiene with innovative, health-conscious products" />
-      </Helmet>
+      </Helmet> */}
       <section className="py-16 bg-white about-section">
 
         <div className="container mx-auto px-4 ">
